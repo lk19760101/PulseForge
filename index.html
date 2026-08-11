@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NetraX — Pulse Forge Labs</title>
 <meta name="description" content="One fundus photograph, read for signs of disease that begin far from the eye.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cstyle%3Epath%7Bstroke:%23231F19;fill:none;stroke-width:2.7;stroke-linecap:round%7Dcircle%7Bfill:%23231F19%7D@media(prefers-color-scheme:dark)%7Bpath%7Bstroke:%23FBF4E4%7Dcircle%7Bfill:%23FBF4E4%7D%7D%3C/style%3E%3Ccircle cx='32' cy='32' r='2.3'/%3E%3Cpath d='M 29.41 43.21 A 11.5 11.5 0 1 1 34.59 43.21'/%3E%3Cpath d='M 40.70 14.10 A 19.9 19.9 0 0 1 40.70 49.90'/%3E%3Cpath d='M 23.30 49.90 A 19.9 19.9 0 0 1 23.30 14.10'/%3E%3Cpath d='M 47.23 7.91 A 28.5 28.5 0 0 1 47.23 56.09'/%3E%3Cpath d='M 16.77 56.09 A 28.5 28.5 0 0 1 16.77 7.91'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -51,9 +52,10 @@ h1,h2,h3{font-weight:500;letter-spacing:-.025em;line-height:1.08}
 h1{font-size:clamp(2.35rem,5.6vw,4.6rem);letter-spacing:-.032em;line-height:1.05}
 h2{font-size:clamp(1.95rem,4vw,3.35rem)}
 h3{font-size:clamp(1.2rem,1.7vw,1.5rem);letter-spacing:-.018em}
-.eyebrow{font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--signal-text);margin-bottom:20px}
-.hero .eyebrow{text-transform:none;letter-spacing:.09em;font-size:.8rem}
+.eyebrow{font-size:1rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--signal-text);margin-bottom:20px;
+  text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.32em}
+.hero .eyebrow{text-transform:none;letter-spacing:.09em;font-size:1.05rem}
 .accent{font-family:'Cormorant',Georgia,serif;font-style:italic;font-weight:500;
   letter-spacing:0;color:var(--signal-text)}
 h1 .accent{font-size:1.12em;line-height:.9}
@@ -205,6 +207,11 @@ html:not([data-theme]) .mode .i-moon{opacity:1;transform:none}
 .step:hover{border-color:var(--rule-strong);transform:translateY(-3px)}
 .step .n{font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
   color:var(--accent2);margin-bottom:16px}
+.step .glyph{display:block;width:54px;height:54px;margin-bottom:20px}
+.step .glyph .ln{stroke:var(--bone);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.step .glyph .sg{stroke:var(--signal);fill:none;stroke-width:1.5;stroke-linecap:round}
+.step .glyph .bd{stroke:var(--signal);fill:none;stroke-width:4;stroke-linecap:round}
+.step .glyph .dt{fill:var(--signal)}
 .step h3{margin-bottom:12px}
 .step p{font-size:.9375rem;color:var(--muted);line-height:1.6}
 .claim{margin-top:clamp(40px,6vh,76px)}
@@ -342,7 +349,7 @@ footer a:hover{color:var(--bone)}
 <section class="hero" id="hero">
   <div class="wrap">
     <p class="eyebrow rev">NetraX</p>
-    <h1 class="rev">The accuracy of invasive testing, <span class="accent">without</span> the invasion.</h1>
+    <h1 class="rev">The accuracy of invasive testing, <span class="accent">without</span> the invasion</h1>
     <p class="lede rev">No pain. No needles. No incisions.</p>
     <div class="ctas rev">
       <a class="btn" href="#caps">See what it reads</a>
@@ -358,7 +365,7 @@ footer a:hover{color:var(--bone)}
 <section class="vision center has-panel" id="vision">
   <div class="wrap panelled">
     <p class="eyebrow rev">Vision</p>
-    <h2 class="rev">A photograph the clinic <span class="accent">already</span> takes.</h2>
+    <h2 class="rev">A photograph the clinic <span class="accent">already</span> takes</h2>
     <div style="max-width:62ch;margin:38px auto 0;text-align:left">
       <p class="rev">The retina is the only place in the body where blood vessels and nerve tissue
         can be observed directly, without an incision and without contrast. A fundus camera
@@ -379,7 +386,7 @@ footer a:hover{color:var(--bone)}
       <div class="cap-stick">
         <div class="center cap-head">
           <p class="eyebrow rev">Capabilities</p>
-          <h2 class="rev">Eight readings from <span class="accent">one</span> image.</h2>
+          <h2 class="rev">Eight readings from <span class="accent">one</span> image</h2>
           <p class="lede rev" style="margin-top:10px">Scroll or select a condition — the retina
             highlights the region the model reads.</p>
         </div>
@@ -402,10 +409,10 @@ footer a:hover{color:var(--bone)}
   <div class="band"><div class="band-inner">
     <div class="center">
       <p class="eyebrow rev">How it works</p>
-      <h2 class="rev">Four steps, <span class="accent">no</span> new hardware.</h2>
+      <h2 class="rev">Four steps, <span class="accent">no</span> new hardware</h2>
     </div>
     <div class="steps" id="steps"></div>
-    <div class="claim center rev"><h2>Screening, not diagnosis.</h2></div>
+    <div class="claim center rev"><h2>Screening, not diagnosis</h2></div>
   </div></div>
 </section>
 
@@ -413,7 +420,7 @@ footer a:hover{color:var(--bone)}
   <div class="wrap">
     <div class="center">
       <p class="eyebrow rev">Journey</p>
-      <h2 class="rev">Where we are, and <span class="accent">what's next</span>.</h2>
+      <h2 class="rev">Where we are, and <span class="accent">what's next</span></h2>
     </div>
     <div class="jgroup rev">
       <div class="jhead"><span class="t">Shipped</span><span class="c">Delivered and in use</span></div>
@@ -430,7 +437,7 @@ footer a:hover{color:var(--bone)}
   <div class="wrap panelled">
     <div class="center">
       <p class="eyebrow rev">Team</p>
-      <h2 class="rev">The <span class="accent">team</span>.</h2>
+      <h2 class="rev">The <span class="accent">team</span></h2>
     </div>
     <div class="team" id="teamGrid"></div>
   </div>
@@ -439,7 +446,7 @@ footer a:hover{color:var(--bone)}
 <section class="contact" id="contact">
   <div class="wrap">
     <p class="eyebrow rev">Contact</p>
-    <h2 class="rev">Let's <span class="accent">talk</span>.</h2>
+    <h2 class="rev">Let's <span class="accent">talk</span></h2>
     <p class="rev"><a class="mail" href="mailto:admin@pulseforgelabs.com">admin@pulseforgelabs.com</a></p>
     <div class="ctas rev"><a class="btn" href="mailto:admin@pulseforgelabs.com">Get in touch</a></div>
   </div>
@@ -472,10 +479,16 @@ footer a:hover{color:var(--bone)}
 var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---- brand mark, from the Figma arc geometry ---- */
-var MARK={dot:.176,arcs:[{r:1,a:69.5},{r:1.73,a:64.1},{r:2.479,a:57.7}]};
+var MARK={dot:.2,ring:{r:1,gap:26},arcs:[{r:1.73,a:64.1},{r:2.479,a:57.7}]};
 (function(){
   var svg=document.getElementById('mark'), cx=30, cy=20, s=6.4, h='';
   h+='<circle cx="'+cx+'" cy="'+cy+'" r="'+(MARK.dot*s).toFixed(2)+'"/>';
+  /* near-complete ring, gap centred at the base (90deg in y-down coords) */
+  var R0=MARK.ring.r*s, g=MARK.ring.gap/2,
+      b0=(90+g)*Math.PI/180, b1=(90-g)*Math.PI/180;
+  h+='<path d="M '+(cx+R0*Math.cos(b0)).toFixed(2)+' '+(cy+R0*Math.sin(b0)).toFixed(2)+
+     ' A '+R0.toFixed(2)+' '+R0.toFixed(2)+' 0 1 1 '+
+     (cx+R0*Math.cos(b1)).toFixed(2)+' '+(cy+R0*Math.sin(b1)).toFixed(2)+'"/>';
   MARK.arcs.forEach(function(A){
     [0,180].forEach(function(base){
       var R=A.r*s, a0=(base-A.a)*Math.PI/180, a1=(base+A.a)*Math.PI/180;
@@ -587,8 +600,14 @@ var STEPS=[
  ['Step three','Inference','The model reads vessel calibre, branching geometry and tissue texture across the field.'],
  ['Step four','Report','A screening flag with a confidence band, and the region the model attended to.']
 ];
-document.getElementById('steps').innerHTML=STEPS.map(function(s){
-  return '<div class="step rev"><p class="n">'+s[0]+'</p><h3>'+s[1]+'</h3><p>'+s[2]+'</p></div>';
+var SICONS=[
+ '<path class="ln" d="M6 16 V6 H16 M48 6 H58 V16 M58 48 V58 H48 M16 58 H6 V48"/><circle class="ln" cx="32" cy="32" r="14"/><circle class="dt" cx="37" cy="29" r="2.4"/>',
+ '<circle class="ln" cx="32" cy="32" r="14"/><path class="ln" d="M32 8 V14 M32 50 V56 M8 32 H14 M50 32 H56"/><circle class="sg" cx="32" cy="32" r="4.5"/><circle class="dt" cx="32" cy="32" r="1.4"/>',
+ '<circle class="ln" cx="32" cy="32" r="14"/><path class="ln" d="M23 41 Q28 35 32 31 Q36 27 41 24 M32 31 Q36 33 41 37 M28 36 Q26 32 26 28"/><path class="sg" d="M51 25 A10.5 10.5 0 0 1 51 39 M55 22 A15 15 0 0 1 55 42"/>',
+ '<rect class="ln" x="18" y="6" width="28" height="52" rx="4"/><path class="ln" d="M24 18 H40 M24 24 H37 M24 30 H40"/><path class="ln" d="M24 42 H40" opacity=".45"/><path class="bd" d="M27 42 H35"/>'
+];
+document.getElementById('steps').innerHTML=STEPS.map(function(s,i){
+  return '<div class="step rev"><svg class="glyph" viewBox="0 0 64 64" aria-hidden="true">'+SICONS[i]+'</svg><p class="n">'+s[0]+'</p><h3>'+s[1]+'</h3><p>'+s[2]+'</p></div>';
 }).join('');
 
 /* ---- journey ---- */
